@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-06-10T19:22:10.019Z</updated>
+  <updated>2021-06-10T17:46:22.055Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2021/06/11/hello-world/"/>
-    <id>http://yoursite.com/2021/06/11/hello-world/</id>
-    <published>2021-06-10T19:22:10.019Z</published>
-    <updated>2021-06-10T19:22:10.019Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>前端面试题整理（CSS篇）</title>
@@ -419,6 +402,25 @@
     
     
     <summary type="html">&lt;p&gt; Vue.js 允许自定义过滤器，可被用于一些常见的文本格式化。过滤器可以用在两个地方：插值表达式和 &lt;code&gt;v-bind&lt;/code&gt; 表达式 (后者从 2.1.0+ 开始支持)。过滤器应该被添加在 JavaScript 表达式的尾部，由“管道”符号（“|”）指示。使用方式为： msg | formatMsg，其中msg为要被过滤的文本，formatMsg为过滤器名称。 &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-Devtools调试工具</title>
+    <link href="http://yoursite.com/2018/07/24/Vue-Devtools%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    <id>http://yoursite.com/2018/07/24/Vue-Devtools%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/</id>
+    <published>2018-07-24T04:14:24.000Z</published>
+    <updated>2018-07-24T04:14:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Vue在chrome浏览器的调试工具Vue-Devtools"><a href="#Vue在chrome浏览器的调试工具Vue-Devtools" class="headerlink" title="Vue在chrome浏览器的调试工具Vue-Devtools"></a>Vue在chrome浏览器的调试工具Vue-Devtools</h3><p> vue-devtools是一款基于chrome游览器的插件，用于调试vue应用，这可以极大地提高我们的调试效率。接下来我们就介绍一下vue-devtools的安装。 </p><p> <strong>安装地址：</strong> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/vuejs/vue-devtools</span><br></pre></td></tr></table></figure><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd</span><br></pre></td></tr></table></figure><p>vue项目, 打开f12, 选择vue就可以使用了</p><p>vue是数据驱动的, 这样就能看到对应数据了, 方便我们进行调试</p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;Vue在chrome浏览器的调试工具Vue-Devtools&quot;&gt;&lt;a href=&quot;#Vue在chrome浏览器的调试工具Vue-Devtools&quot; class=&quot;headerlink&quot; title=&quot;Vue在chrome浏览器的调试工具Vue-Devtools&quot;&gt;&lt;/a&gt;Vue在chrome浏览器的调试工具Vue-Devtools&lt;/h3&gt;&lt;p&gt; vue-devtools是一款基于chrome游览器的插件，用于调试vue应用，这可以极大地提高我们的调试效率。接下来我们就介绍一下vue-devtools的安装。 &lt;/p&gt;&lt;p&gt; &lt;strong&gt;安装地址：&lt;/strong&gt; &lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://github.com/vuejs/vue-devtools&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
