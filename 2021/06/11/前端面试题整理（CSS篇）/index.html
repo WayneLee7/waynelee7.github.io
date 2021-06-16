@@ -73,7 +73,7 @@
 <meta property="og:site_name" content="WayneLee">
 <meta property="og:description" content="CSS介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同 一个基本的盒模型，包括content(width/height)，padding，border，margin  有两种盒子模型，IE盒模型和W3C标准盒模型，两者的区别：W3C标准盒模型，宽高是只有内容content，没有padding和border的， 而IE盒模型，宽高不光有content，还包含了padding和borde">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-06-10T17:46:22.055Z">
+<meta property="og:updated_time" content="2021-06-16T11:13:38.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试题整理（CSS篇）">
 <meta name="twitter:description" content="CSS介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同 一个基本的盒模型，包括content(width/height)，padding，border，margin  有两种盒子模型，IE盒模型和W3C标准盒模型，两者的区别：W3C标准盒模型，宽高是只有内容content，没有padding和border的， 而IE盒模型，宽高不光有content，还包含了padding和borde">
@@ -234,10 +234,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-11 01:28:57 / 修改时间：01:46:22" itemprop="dateCreated datePublished" datetime="2021-06-11T01:28:57+08:00">2021-06-11</time>
+              <time title="创建时间：2021-06-11 01:28:57" itemprop="dateCreated datePublished" datetime="2021-06-11T01:28:57+08:00">2021-06-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-16 19:13:38" itemprop="dateModified" datetime="2021-06-16T19:13:38+08:00">2021-06-16</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -261,11 +267,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h4 id="介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><a href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同" class="headerlink" title="介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"></a>介绍一下标准的<code>css</code>的盒子模型？低版本IE的盒子模型有什么不同</h4><p> 一个基本的盒模型，包括<code>content(width/height)</code>，<code>padding</code>，<code>border</code>，<code>margin</code> </p><p> 有两种盒子模型，<code>IE</code>盒模型和<code>W3C</code>标准盒模型，</p><p>两者的区别：W3C标准盒模型，宽高是只有内容content，没有padding和border的， 而IE盒模型，宽高不光有content，还包含了padding和border</p><a id="more"></a>
+        <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h4 id="介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><a href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同" class="headerlink" title="介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"></a>介绍一下标准的<code>css</code>的盒子模型？低版本IE的盒子模型有什么不同</h4><p> 一个基本的盒模型，包括<code>content(width/height)</code>，<code>padding</code>，<code>border</code>，<code>margin</code> </p><p> 有两种盒子模型，<code>IE</code>盒模型和<code>W3C</code>标准盒模型，</p><p>两者的区别：<code>W3C</code>标准盒模型，宽高是只有内容<code>content</code>，没有<code>padding</code>和<code>border</code>的， 而<code>IE</code>盒模型，宽高不光有<code>content</code>，还包含了<code>padding</code>和<code>border</code></p><a id="more"></a>
 
 
-<h4 id="display-none与visibility-hidden的区别？"><a href="#display-none与visibility-hidden的区别？" class="headerlink" title="display:none与visibility:hidden的区别？"></a><code>display:none</code>与<code>visibility:hidden</code>的区别？</h4><p> display : 隐藏对应的元素但不挤占该元素原来的空间。 visibility: 隐藏对应的元素并且挤占该元素原来的空间。 </p>
-<h4 id="为什么要初始化样式-？"><a href="#为什么要初始化样式-？" class="headerlink" title="为什么要初始化样式 ？"></a>为什么要初始化样式 ？</h4><p> 由于浏览器兼容的问题，不同的浏览器对标签的默认样式值不同，若不初始化会造成不同浏览器之间的显示差异但是初始化 <code>CSS</code>会对搜索引擎优化造成小影 </p>
+<p>怎么设置<code>w3c</code>盒模型和<code>ie</code>盒模型？           </p>
+<p><code>box-sizing</code>用来控制元素的盒子模型的解析模式 </p>
+<p><code>box-sizing: content-box</code>;　　// <code>W3C</code>标准盒模型（默认情况下）</p>
+<p><code>box-sizing: border-box</code>;　　// <code>IE</code>盒模型</p>
+<p>（这个也比较好记，标准的就是只有内容，就是<code>content</code>，而<code>IE</code>就是有<code>border</code>的）</p>
+<h4 id="display-none与visibility-hidden的区别？"><a href="#display-none与visibility-hidden的区别？" class="headerlink" title="display:none与visibility:hidden的区别？"></a><code>display:none</code>与<code>visibility:hidden</code>的区别？</h4><p><code>display</code>: 隐藏对应的元素但不挤占该元素原来的空间。 </p>
+<p><code>visibility</code>: 隐藏对应的元素并且挤占该元素原来的空间。 </p>
+<h4 id="为什么要初始化样式-？"><a href="#为什么要初始化样式-？" class="headerlink" title="为什么要初始化样式 ？"></a>为什么要初始化样式 ？</h4><p> 由于浏览器兼容的问题，不同的浏览器对标签的默认样式值不同，若不初始化会造成不同浏览器之间的显示差异但是初始化<code>CSS</code>会对搜索引擎优化造成小影响。</p>
+<h4 id="CSS选择符有哪些？"><a href="#CSS选择符有哪些？" class="headerlink" title="CSS选择符有哪些？"></a>CSS选择符有哪些？</h4><ul>
+<li><code>id</code>选择器(<code>#myid</code>)</li>
+<li>类选择器(<code>.myclassName</code>)</li>
+<li>标签选择器(<code>div,h1,p</code>)</li>
+<li>子代选择器(<code>ul&gt;li</code>)</li>
+<li>后代选择器(<code>li a</code>)</li>
+<li>通配符选择器(<code>*</code>)</li>
+<li>属性选择器(<code>a[rel=&quot;external&quot;]</code>)</li>
+<li>伪类选择器(<code>a:hover,li:nth-child</code>)</li>
+</ul>
+<h4 id="为什么需要清浮动？清浮动的方式"><a href="#为什么需要清浮动？清浮动的方式" class="headerlink" title="为什么需要清浮动？清浮动的方式"></a>为什么需要清浮动？清浮动的方式</h4><p>由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响，为了解决这些问题，就需要在该元素中清除浮动，准确地说，并不是清除浮动，而是<strong>清除浮动后造成的影响</strong>。</p>
+<p>清浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使页面后面的布局不能正常显示</p>
+<ul>
+<li>父级<code>div</code>定义<code>height</code></li>
+<li>在浮动元素后面添加<code>class</code>为<code>clear</code>的空<code>div</code>元素，给这个div设置样式<code>.clear{clear:both}</code></li>
+<li>给父容器添加<code>overflow:hidden</code>或者<code>auto</code>样式</li>
+<li>给父容器添加<code>clearfix</code>的<code>class</code>，用伪类<code>clearfix:after</code>；来这个样式。清除浮动</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>&#123;</span><br><span class="line">    <span class="attribute">zoom</span>:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clear</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">'.'</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="attribute">visibility</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="什么是外边距合并"><a href="#什么是外边距合并" class="headerlink" title="什么是外边距合并"></a>什么是外边距合并</h4><p>外边距合并指的是，当两个垂直外边距相遇时，他们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中较大者 </p>
+<h4 id="如何获取盒子的宽高？"><a href="#如何获取盒子的宽高？" class="headerlink" title="如何获取盒子的宽高？"></a>如何获取盒子的宽高？</h4><p> 我们用得最多的就是<code>dom.offsetWidth  dom.offsetHeight</code>，这个包含了<code>width/height</code>，<code>padding</code>和<code>border</code>，是项目中最常用的，兼容性也最好，记住这个就行了 </p>
+<h4 id="列举一些常用的伪类或伪元素？"><a href="#列举一些常用的伪类或伪元素？" class="headerlink" title="列举一些常用的伪类或伪元素？"></a>列举一些常用的伪类或伪元素？</h4><p><strong>伪类</strong>：（大部分都是<code>CSS3</code>里新增的）</p>
+<p>: <code>hover</code> 鼠标hover</p>
+<p>: <code>nth-child(n)</code>  选中父元素下的第<code>n</code>个子元素</p>
+<p>: <code>not()</code>  不是什么什么</p>
+<p>: <code>first-child</code>  第一个子元素</p>
+<p>: <code>last-child</code>  最后一个子元素</p>
+<p>: <code>checked</code>  单选框或复选框被选中的</p>
+<p><strong>伪元素</strong>：</p>
+<p>:: <code>before</code></p>
+<p>:: <code>after</code></p>
+<h4 id="选择器权重计算比较？"><a href="#选择器权重计算比较？" class="headerlink" title="选择器权重计算比较？"></a>选择器权重计算比较？</h4><p>一般讨论四种选择器：</p>
+<p>元素或伪元素(::)  （x，x，x，0）</p>
+<p>class选择符或伪类(:)   （x，x，0，x）</p>
+<p>id选择符  （x，0，x，x）</p>
+<p>标签内选择符  （0，x，x，x）</p>
+<p>通常计算方法就是每出现一个，就在对应的权位上加<code>1</code>，不可进位，两个选择器比较权重就是从首位开始比较，数字相同的话就比较下一个。</p>
+<p><code>!important</code>权位最高，不在讨论范围内，可以理解为  （1，x，x，x，x）</p>
+<p>相同都有<code>!important</code>，就看谁在后面</p>
 
     </div>
 
@@ -287,9 +338,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2021/06/11/dd/" rel="prev" title="dd">
-                  dd <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -328,7 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-none与visibility-hidden的区别？"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">display:none与visibility:hidden的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要初始化样式-？"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">为什么要初始化样式 ？</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-none与visibility-hidden的区别？"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">display:none与visibility:hidden的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要初始化样式-？"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">为什么要初始化样式 ？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS选择符有哪些？"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">CSS选择符有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要清浮动？清浮动的方式"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">为什么需要清浮动？清浮动的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是外边距合并"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">什么是外边距合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取盒子的宽高？"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">如何获取盒子的宽高？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列举一些常用的伪类或伪元素？"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">列举一些常用的伪类或伪元素？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择器权重计算比较？"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">选择器权重计算比较？</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -343,7 +391,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
