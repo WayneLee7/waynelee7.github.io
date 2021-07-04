@@ -73,7 +73,7 @@
 <meta property="og:site_name" content="WayneLee">
 <meta property="og:description" content="CSS介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同 一个基本的盒模型，包括content(width/height)，padding，border，margin  有两种盒子模型，IE盒模型和W3C标准盒模型，两者的区别：W3C标准盒模型，宽高是只有内容content，没有padding和border的， 而IE盒模型，宽高不光有content，还包含了padding和borde">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-06-22T18:29:01.677Z">
+<meta property="og:updated_time" content="2021-06-28T13:39:42.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试题整理（CSS篇）">
 <meta name="twitter:description" content="CSS介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同 一个基本的盒模型，包括content(width/height)，padding，border，margin  有两种盒子模型，IE盒模型和W3C标准盒模型，两者的区别：W3C标准盒模型，宽高是只有内容content，没有padding和border的， 而IE盒模型，宽高不光有content，还包含了padding和borde">
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-23 02:29:01" itemprop="dateModified" datetime="2021-06-23T02:29:01+08:00">2021-06-23</time>
+                <time title="修改时间：2021-06-28 21:39:42" itemprop="dateModified" datetime="2021-06-28T21:39:42+08:00">2021-06-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -416,6 +416,32 @@
 <p>如果有一个值，那四面相同                                          <strong>上右下左</strong></p>
 <h4 id="对line-height是如何理解的？"><a href="#对line-height是如何理解的？" class="headerlink" title="对line-height是如何理解的？"></a>对line-height是如何理解的？</h4><p>基线位置是由字体确定的，css的line-height指的是一行字的高度，包含了字间距，实际上就是下一行的基线到上一行的基线距离。</p>
 <p>line-height的值跟height的值一样，字体就会垂直居中;</p>
+<h4 id="解释下CSS-sprites是什么？"><a href="#解释下CSS-sprites是什么？" class="headerlink" title="解释下CSS sprites是什么？"></a>解释下CSS sprites是什么？</h4><p>CSS Sprites 其实就是把网页中一些背景图片整合到一张图片文件中， 将多个⼩图⽚拼接到⼀个图⽚中。通过 background-position 和元素尺⼨调节需要显示的背景图案。 </p>
+<p>再利用 CSS 的”background-image”，“background-repeat”，“background-position” 的组合进行背景定位，background-position 可以用数字能精确的定位出背景图片的位置。</p>
+<p>这样可以减少很多图片请求的开销，因为请求耗时比较长；</p>
+<h4 id="抽离样式模块怎么写，说出思路，有无实践经验？"><a href="#抽离样式模块怎么写，说出思路，有无实践经验？" class="headerlink" title="抽离样式模块怎么写，说出思路，有无实践经验？"></a>抽离样式模块怎么写，说出思路，有无实践经验？</h4><p>首一个成熟的网站需要有统一的风格，一致的用户体验，比如：网站的配色，字体的大小，交互行为一致等应该在设计之初就得到确定，而不是由个体开发者来自由的定义。</p>
+<p>网站同时应存在可以提取出来公用的样式部分。那么我们就可以把网站的字体大小，公共控制，共用模块的样式都抽离出来，作为单独的模块来处理。</p>
+<p>这样，团队中的每个人如果需要这样的样式，都可以用这种公共样式，以此提高代码的重用率。</p>
+<p>我认为一个项目的CSS可以拆分成2部分：公共CSS和业务CSS。</p>
+<p>我们在项目中抽出的这部分可以模块化的CSS就可以归类为公共CSS。</p>
+<p>这部分的代码命名不应涉及到具体的业务，只应对其在模块中负责的具体逻辑负责。</p>
+<p>对于业务CSS，我们需要有统一的命名。如一个网站中有如下几个栏目：文件，社区，社交关系等，在项目规划时，就需要把这块模块的名称定好，</p>
+<p>比如 文件-files,社区-cmty(community简写)，这样开发人员在写样式时，就可以使用公用的前缀，.cmty-cmtydetail，而不会根据各自的想法，</p>
+<p>写成.community或是.commu，这一点对于统一风格是尽为重要的，也方便备用人员接手工作。</p>
+<h4 id="base64有什么好处，base64有什么缺点？"><a href="#base64有什么好处，base64有什么缺点？" class="headerlink" title="base64有什么好处，base64有什么缺点？"></a>base64有什么好处，base64有什么缺点？</h4><p>什么时候用，一般移动端的大的背景图会用base64，而且图片体积比较大的时候才会用base64；</p>
+<p>如果图片比较小，那么base64编码后的字符串会比图片本身还大，只有图片打到几百K的时候，</p>
+<p>用base64编码会大大缩小图片的体积；</p>
+<p><strong>优点</strong>：能够减小大图片的尺寸，同时还能够减少HTTP请求数量；HTTP请求是非常耗费服务器资源的；</p>
+<h4 id="JS为什么会放在下面，CSS为什么放在上面"><a href="#JS为什么会放在下面，CSS为什么放在上面" class="headerlink" title="JS为什么会放在下面，CSS为什么放在上面"></a>JS为什么会放在下面，CSS为什么放在上面</h4><p>浏览器从上到下依次解析html文档。</p>
+<p>将 css 文件放到头部， css 文件可以先加载。避免先加载 body 内容，导致页面一开始样式错乱，然后闪烁。</p>
+<p>将 javascript 文件放到底部是因为：若</p>
+<p>将 javascript 文件放到 head 里面，就意味着必须等到所有的 javascript 代码都被 下载、解析和执行完成 之后才开始呈现页面内容。</p>
+<p>这样就会造成呈现页面时出现明显的延迟，窗口一片空白。</p>
+<p>为避免这样的问题一般将全部 javascript 文件放到 body 元素中页面内容的后面。</p>
+<h4 id="rgba-和opacity的透明效果有什么不同？"><a href="#rgba-和opacity的透明效果有什么不同？" class="headerlink" title="rgba()和opacity的透明效果有什么不同？"></a>rgba()和opacity的透明效果有什么不同？</h4><ul>
+<li>rgba() 和 opacity 都能实现透明效果，但最⼤的不同是 opacity 作⽤于元素，以及元素内的所有内容的透明度，</li>
+<li>⽽ rgba() 只作⽤于元素的颜⾊或其背景⾊。（设置 rgba 透明的元素的⼦元素不会继承透明效果！</li>
+</ul>
 
     </div>
 
@@ -478,7 +504,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-none与visibility-hidden的区别？"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">display:none与visibility:hidden的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要初始化样式-？"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">为什么要初始化样式 ？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS选择符有哪些？"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">CSS选择符有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要清浮动？清浮动的方式"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">为什么需要清浮动？清浮动的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是外边距合并"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">什么是外边距合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取盒子的宽高？"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">如何获取盒子的宽高？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列举一些常用的伪类或伪元素？"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">列举一些常用的伪类或伪元素？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择器权重计算比较？"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">选择器权重计算比较？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何居中一个div？"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">如何居中一个div？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS中定位的方式有哪些？position属性的值有哪些？"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">CSS中定位的方式有哪些？position属性的值有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display有哪些值？说明他们的作用"><span class="nav-number">1.0.0.12.</span> <span class="nav-text">display有哪些值？说明他们的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3有哪些新特性？"><span class="nav-number">1.0.0.13.</span> <span class="nav-text">CSS3有哪些新特性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3新增伪类有哪些？"><span class="nav-number">1.0.0.14.</span> <span class="nav-text">CSS3新增伪类有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin的上下左右四个数值？"><span class="nav-number">1.0.0.15.</span> <span class="nav-text">margin的上下左右四个数值？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对line-height是如何理解的？"><span class="nav-number">1.0.0.16.</span> <span class="nav-text">对line-height是如何理解的？</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">介绍一下标准的css的盒子模型？低版本IE的盒子模型有什么不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-none与visibility-hidden的区别？"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">display:none与visibility:hidden的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要初始化样式-？"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">为什么要初始化样式 ？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS选择符有哪些？"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">CSS选择符有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要清浮动？清浮动的方式"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">为什么需要清浮动？清浮动的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是外边距合并"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">什么是外边距合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取盒子的宽高？"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">如何获取盒子的宽高？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列举一些常用的伪类或伪元素？"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">列举一些常用的伪类或伪元素？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择器权重计算比较？"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">选择器权重计算比较？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何居中一个div？"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">如何居中一个div？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS中定位的方式有哪些？position属性的值有哪些？"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">CSS中定位的方式有哪些？position属性的值有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display有哪些值？说明他们的作用"><span class="nav-number">1.0.0.12.</span> <span class="nav-text">display有哪些值？说明他们的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3有哪些新特性？"><span class="nav-number">1.0.0.13.</span> <span class="nav-text">CSS3有哪些新特性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3新增伪类有哪些？"><span class="nav-number">1.0.0.14.</span> <span class="nav-text">CSS3新增伪类有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin的上下左右四个数值？"><span class="nav-number">1.0.0.15.</span> <span class="nav-text">margin的上下左右四个数值？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对line-height是如何理解的？"><span class="nav-number">1.0.0.16.</span> <span class="nav-text">对line-height是如何理解的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解释下CSS-sprites是什么？"><span class="nav-number">1.0.0.17.</span> <span class="nav-text">解释下CSS sprites是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽离样式模块怎么写，说出思路，有无实践经验？"><span class="nav-number">1.0.0.18.</span> <span class="nav-text">抽离样式模块怎么写，说出思路，有无实践经验？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#base64有什么好处，base64有什么缺点？"><span class="nav-number">1.0.0.19.</span> <span class="nav-text">base64有什么好处，base64有什么缺点？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS为什么会放在下面，CSS为什么放在上面"><span class="nav-number">1.0.0.20.</span> <span class="nav-text">JS为什么会放在下面，CSS为什么放在上面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rgba-和opacity的透明效果有什么不同？"><span class="nav-number">1.0.0.21.</span> <span class="nav-text">rgba()和opacity的透明效果有什么不同？</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -66,14 +66,17 @@
     }
 </style>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="JavaScript 中有几种数据类型基本数据类型和引用数据类型 基本数据类型 ：String、Number、Boolean 、Null、Undefined、Symbol、BigInt ;  引用数据类型：Object; 不同类型的数据储存原理栈：原始数据类型（Undefined，Null，Boolean，Number、String）">
+<meta property="og:type" content="article">
 <meta property="og:title" content="前端面试题整理（js篇）">
 <meta property="og:url" content="http://yoursite.com/2021/06/20/前端面试题整理（js篇）/index.html">
 <meta property="og:site_name" content="WayneLee">
+<meta property="og:description" content="JavaScript 中有几种数据类型基本数据类型和引用数据类型 基本数据类型 ：String、Number、Boolean 、Null、Undefined、Symbol、BigInt ;  引用数据类型：Object; 不同类型的数据储存原理栈：原始数据类型（Undefined，Null，Boolean，Number、String）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-06-20T05:51:59.834Z">
+<meta property="og:updated_time" content="2021-07-04T10:36:59.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试题整理（js篇）">
+<meta name="twitter:description" content="JavaScript 中有几种数据类型基本数据类型和引用数据类型 基本数据类型 ：String、Number、Boolean 、Null、Undefined、Symbol、BigInt ;  引用数据类型：Object; 不同类型的数据储存原理栈：原始数据类型（Undefined，Null，Boolean，Number、String）">
 
 <link rel="canonical" href="http://yoursite.com/2021/06/20/前端面试题整理（js篇）/">
 
@@ -234,6 +237,13 @@
 
               <time title="创建时间：2021-06-20 13:51:59" itemprop="dateCreated datePublished" datetime="2021-06-20T13:51:59+08:00">2021-06-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-04 18:36:59" itemprop="dateModified" datetime="2021-07-04T18:36:59+08:00">2021-07-04</time>
+              </span>
 
           
 
@@ -246,7 +256,210 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h4 id="JavaScript-中有几种数据类型"><a href="#JavaScript-中有几种数据类型" class="headerlink" title="JavaScript 中有几种数据类型"></a>JavaScript 中有几种数据类型</h4><p><strong>基本数据类型</strong>和<strong>引用数据类型</strong></p><p> 基本数据类型 ：<code>String</code>、<code>Number</code>、<code>Boolean</code> 、<code>Null</code>、<code>Undefined</code>、<code>Symbol</code>、<code>BigInt</code> ; </p><p> 引用数据类型：<code>Object</code>; </p><p><strong>不同类型的数据储存原理</strong></p><p>栈：原始数据类型（Undefined，Null，Boolean，Number、String）</p><a id="more"></a>
+
+
+
+
+<p>堆：引用数据类型（对象、数组和函数）</p>
+<p><strong>两种类型的区别是：存储位置不同</strong></p>
+<p>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；</p>
+<p>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。</p>
+<p>当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体</p>
+<h4 id="JavaScript-什么叫全局变量-什么叫局部变量了-是如何定义出来的"><a href="#JavaScript-什么叫全局变量-什么叫局部变量了-是如何定义出来的" class="headerlink" title="JavaScript 什么叫全局变量?什么叫局部变量了?是如何定义出来的?"></a>JavaScript 什么叫全局变量?什么叫局部变量了?是如何定义出来的?</h4><p>全局变量是在函数外部定义的变量,在JS中全局变量属于window对象</p>
+<p>局部变量是相对与全局变量而言的,在特定过程或函数中可以访问的变量,作用域较小,当函数运行结束释放局部变量</p>
+<h4 id="var-和-let-const-的区别"><a href="#var-和-let-const-的区别" class="headerlink" title="var 和 let const 的区别"></a>var 和 let const 的区别</h4><ul>
+<li>var 是 ES5 语法， let const 是 ES6 语法； var 有变量提升</li>
+<li>var 和 let 是变量，可修改；const 是常量，不可修改</li>
+<li>let const 有块级作用域（ES6），var 没有</li>
+</ul>
+<h4 id="typeof-返回哪些类型"><a href="#typeof-返回哪些类型" class="headerlink" title="typeof 返回哪些类型"></a>typeof 返回哪些类型</h4><ul>
+<li>值类型：<code>undefined</code> <code>string</code> <code>number</code> <code>boolean</code> <code>symbol</code></li>
+<li>引用类型：<code>object</code> (注意： typeof null === ‘object’)</li>
+<li>函数类型：<code>function</code></li>
+</ul>
+<h4 id="列举强制类型转换和隐式类型转换"><a href="#列举强制类型转换和隐式类型转换" class="headerlink" title="列举强制类型转换和隐式类型转换"></a>列举强制类型转换和隐式类型转换</h4><ul>
+<li>强制：<code>parseInt</code> <code>parseFloat</code> <code>toString</code> 等</li>
+<li>隐式：<code>if</code> <code>逻辑运算</code> <code>==</code> <code>+拼接字符串</code></li>
+</ul>
+<h4 id="split-和-join-的区别？"><a href="#split-和-join-的区别？" class="headerlink" title="split() 和 join() 的区别？"></a>split() 和 join() 的区别？</h4><p>split()方法用于把一个字符串分割成字符串数组</p>
+<p> join() 方法用于把数组中的所有元素放入一个字符串</p>
+<p><strong>String.split() 执行的操作与 Array.join() 执行的操作是相反的</strong></p>
+<h4 id="数组的-pop-push-unshift-shift-分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？"><a href="#数组的-pop-push-unshift-shift-分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？" class="headerlink" title="数组的 pop push unshift shift 分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？"></a>数组的 pop push unshift shift 分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？</h4><p><strong>pop</strong></p>
+<ul>
+<li>删除数组末尾元素</li>
+<li>返回删除元素</li>
+<li>改变原数组</li>
+</ul>
+<p><strong>push</strong></p>
+<ul>
+<li>向数组末尾添加元素</li>
+<li>返回数组长度</li>
+<li>改变原数组</li>
+</ul>
+<p><strong>shift</strong></p>
+<ul>
+<li>删除数组首个元素</li>
+<li>返回被删除元素</li>
+<li>改变原数组</li>
+</ul>
+<p><strong>unshift</strong></p>
+<ul>
+<li>向数组首位添加元素</li>
+<li>返回数组长度</li>
+<li>改变原数组</li>
+</ul>
+<h4 id="数组的API-有哪些是纯函数？-（不对外界产生副作用的函数就叫纯函数）"><a href="#数组的API-有哪些是纯函数？-（不对外界产生副作用的函数就叫纯函数）" class="headerlink" title="数组的API,有哪些是纯函数？  （不对外界产生副作用的函数就叫纯函数）"></a><strong>数组的API,有哪些是纯函数？</strong>  （不对外界产生副作用的函数就叫纯函数）</h4><p><code>concat</code> <code>map</code> <code>filter</code> <code>slice</code> 就是纯函数，它们具有以下特点：</p>
+<p>不改变源数组（没有副作用）；返回一个数组</p>
+<p>concat()把当前的数组和另一个数组合并为一个新的数组 </p>
+<p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。 </p>
+<p>filter()  过滤数组，返回符合条件的值 </p>
+<p>slice() 拷贝数组从start到end(不包括end)的值，返回一个新数组，不会对源数组进行改变 </p>
+<h4 id="数组-slice-和-splice-区别"><a href="#数组-slice-和-splice-区别" class="headerlink" title="数组 slice 和 splice 区别"></a>数组 slice 和 splice 区别</h4><p>slice(start,end)：方法可从已有数组中返回选定的元素，返回一个新数组，包含从start到end（不包含该元素）的数组元素。 （该方法不会改变原数组） </p>
+<p>splice()：该方法向或者从数组中添加或者删除项目，返回被删除的项目。（该方法会改变原数组） </p>
+<p>splice（index,howmany,item1,…itemX）</p>
+<ul>
+<li>index参数：必须，整数，规定添加或者删除的位置，使用负数，从数组尾部规定位置。</li>
+<li>howmany参数：必须，要删除的数量，如果为0，则不删除项目。</li>
+<li>tem1,…itemX参数：可选，向数组添加的新项目。</li>
+</ul>
+<h4 id="call-apply-bind-作用和区别"><a href="#call-apply-bind-作用和区别" class="headerlink" title="call() apply() bind() 作用和区别"></a>call() apply() bind() 作用和区别</h4><p><strong>相同点</strong></p>
+<ul>
+<li>改变对象的执行上下文(总的来说，就是改变this的指向)。<br>this关键字，就是所谓的执行上下文。this关键字在函数中，表示的是一个指向，this的指向永远是一个对象。</li>
+<li>都可以指定调用实参。</li>
+</ul>
+<p><strong>不同点</strong></p>
+<ul>
+<li>call()和bind()的参数是直接连续传递，而apply传递参数是以一个数组传递。</li>
+<li>bind()会返回一个方法。</li>
+</ul>
+<h4 id="事件代理（委托）是什么？"><a href="#事件代理（委托）是什么？" class="headerlink" title="事件代理（委托）是什么？"></a>事件代理（委托）是什么？</h4><p>事件代理就是，本来加在子元素身上的事件，加在了其父级身上 </p>
+<p>事件委托，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，而不是目标元素 </p>
+<p>从上面应用场景中，我们就可以看到使用事件委托存在两大优点：</p>
+<ul>
+<li>减少整个页面所需的内存，提升整体性能</li>
+<li>动态绑定，减少重复工作</li>
+</ul>
+<p>效率高，比如，不用for循环为子元素添加事件了     </p>
+<p>js新生成的子元素也不用新为其添加事件了，程序逻辑上比较方便</p>
+<p><strong>使用事件委托注意事项</strong></p>
+<p>使用“事件委托”时，并不是说把事件委托给的元素越靠近顶层就越好。事件冒泡的过程也需要耗时，越靠近顶层，事件的”事件传播链”越长，也就越耗时。如果DOM嵌套结构很深，事件冒泡通过大量祖先元素会导致性能损失。</p>
+<h4 id="闭包是什么？有什么特性？有什么负面影响？"><a href="#闭包是什么？有什么特性？有什么负面影响？" class="headerlink" title="闭包是什么？有什么特性？有什么负面影响？"></a>闭包是什么？有什么特性？有什么负面影响？</h4><p> 闭包就是能够读取其他函数内部变量的函数。 </p>
+<p> 所以，在本质上，闭包是将函数内部和函数外部连接起来的桥梁 </p>
+<p>子函数可以一层一层读取到父元素的变量，反之不行。但假如我们需要得到函数内的局部变量，正常操作是：在函数的内部再定义一个函数，该函数称之为闭包,通过闭包，向上去读取父函数的局部变量。闭包的作用：读取局部变量；让局部变量的值始终保存在内存中。 </p>
+<p><strong>由于在JS中，变量的作用域属于函数作用域，在函数执行后作用域就会被清理、内存也随之回收，但是由于闭包是建立在一个函数内部的子函数，由于其可访问上级作用域的原因，即使上级函数执行完，作用域也不会随之销毁，这时的子函数——也就是闭包，便拥有了访问上级作用域中的变量的权限，即使上级函数执行完后作用域内的值也不会被销毁。</strong></p>
+<h4 id="如何阻止事件冒泡和默认事件？"><a href="#如何阻止事件冒泡和默认事件？" class="headerlink" title="如何阻止事件冒泡和默认事件？"></a>如何阻止事件冒泡和默认事件？</h4><p>阻止事件冒泡</p>
+<p> e. stopPropagation()   <strong>事件处理过程中，阻止了事件冒泡，但不会阻击默认行为（它就执行了超链接的跳转</strong></p>
+<p> 阻止默认事件</p>
+<p>return false      <strong>事件处理过程中，阻止了事件冒泡，也阻止了默认行为（比如刚才它就没有执行超链接的跳转） </strong></p>
+<p>e.preventDefault()    <strong>事件处理过程中，不阻击事件冒泡，但阻击默认行为（它只执行所有弹框，却没有执行超链接跳转） </strong></p>
+<h4 id="查找，添加，删除，移动DOM节点的方法"><a href="#查找，添加，删除，移动DOM节点的方法" class="headerlink" title="查找，添加，删除，移动DOM节点的方法"></a>查找，添加，删除，移动DOM节点的方法</h4><p><strong>在HTML当中，一切都是节点</strong>：（非常重要）</p>
+<ul>
+<li><strong>元素节点</strong>：HMTL标签。</li>
+<li><strong>文本节点</strong>：标签中的文字（比如标签之间的空格、换行）</li>
+<li><strong>属性节点</strong>：：标签的属性。</li>
+</ul>
+<p>整个html文档就是一个文档节点。所有的节点都是Object。</p>
+<p><strong>访问/获取节点</strong></p>
+<p>document.getElementById(id);　　　　　　　　 　　//返回对拥有指定id的第一个对象进行访问</p>
+<p>document.getElementsByName(name);　　　　　　//返回带有指定名称的节点集合　　 注意拼写:Elements</p>
+<p>document.getElementsByTagName(tagname); 　　//返回带有指定标签名的对象集合　 注意拼写：Elements</p>
+<p>document.getElementsByClassName(classname); //返回带有指定class名称的对象集合 注意拼写：Elements</p>
+<p><strong>创建节点/属性</strong></p>
+<p>document.createElement(eName);　　//创建一个节点</p>
+<p>document.createAttribute(attrName); //对某个节点创建属性</p>
+<p>document.createTextNode(text);　　　//创建文本节点</p>
+<p><strong>添加节点</strong></p>
+<p> document .insertBefore(新的子节点,作为参考的子节点);</p>
+<p>解释：</p>
+<ul>
+<li><p>在参考节点前插入一个新的节点。</p>
+</li>
+<li><p>如果参考节点为null，那么他将在父节点最后插入一个子节点。</p>
+</li>
+</ul>
+<p>父节点.appendChild(新的子节点);　　　　　// 解释：父节点的最后插入一个新的子节点。 </p>
+<p><strong>复制节点</strong></p>
+<p>cloneNode(true | false);　　//复制某个节点  参数：是否复制原节点的所有属性</p>
+<p><strong>删除节点</strong></p>
+<p>parentNode.removeChild(node);　　//删除某个节点的子节点 node是要删除的节点</p>
+<p>注意：为了保证兼容性，要判断元素节点的节点类型(nodeType)，若nodeType==1，再执行删除操作。通过这个方法，就可以在 IE和 Mozilla 完成正确的操作。</p>
+<p>nodeType 属性可返回节点的类型.最重要的节点类型是：</p>
+<table>
+<thead>
+<tr>
+<th>元素类型</th>
+<th>节点类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>属性attr</td>
+<td>2</td>
+</tr>
+<tr>
+<td>文本text</td>
+<td>3</td>
+</tr>
+<tr>
+<td>注释comments</td>
+<td>8</td>
+</tr>
+<tr>
+<td>文档document</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>属性操作</strong></p>
+<p>getAttribute(name)　　　　//通过属性名称获取某个节点属性的值</p>
+<p>setAttribute(name,value); //修改某个节点属性的值</p>
+<p>removeAttribute(name);　 //删除某个属性</p>
+<p><strong>查找节点</strong></p>
+<p>parentObj.firstChild;　　//如果节点为已知节点的第一个子节点就可以使用这个方法。此方法可以递归进行使用 parentObj.firstChild.firstChild…..</p>
+<p>parentObj.lastChild;　　//获得一个节点的最后一个节点，与firstChild一样也可以进行递归使用 parentObj.lastChild.lastChild…..</p>
+<p>parentObj.childNodes;  //获得节点的所有子节点，然后通过循环和索引找到目标节点 </p>
+<p><strong>获取相邻的节点</strong></p>
+<p>curtNode.previousSibling; //获取已知节点的相邻的上一个节点</p>
+<p>curtNode.nextSlbling;　　 // 获取已知节点的下一个节点</p>
+<p><strong>获取父节点</strong></p>
+<p>childNode.parentNode;　　//得到已知节点的父节点</p>
+<p><strong>替换节点</strong></p>
+<p>replace(newNode,oldNode);</p>
+<h4 id="document-load-和-ready-的区别"><a href="#document-load-和-ready-的区别" class="headerlink" title="document load 和 ready 的区别"></a>document load 和 ready 的区别</h4><p>load 是当前页面所有资源加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行的一个函数，<br>问题： 如果图片资源较多，加载时间较长，onload 后等待执行的函数需要等待较长时间，所以一些效果可能受到影响。<br>$(document).ready() 是当DOM 文档树加载完成后执行的一个函数（不包含图片，css 等），所以会比load 较快执行。<br>在原生的js 中不包括ready() 这个方法，只有load 方法就是onload 事件。</p>
+<h4 id="和-的区别"><a href="#和-的区别" class="headerlink" title="== 和 === 的区别"></a><code>==</code> 和 <code>===</code> 的区别</h4><p>简单来说： == 代表相同， ===代表严格相同, 为啥这么说呢， </p>
+<p>这么理解： 当进行双等号比较时候： 先检查两个操作数数据类型，如果相同， 则进行===比较， 如果不同， 则愿意为你进行一次类型转换， 转换成相同类型后再进行比较， 而===比较时， 如果类型不同，直接就是false.</p>
+<p>操作数1 == 操作数2， 操作数1 === 操作数2</p>
+<p>比较过程：</p>
+<p>　　双等号==： </p>
+<p>　　（1）如果两个值类型相同，再进行三个等号(===)的比较</p>
+<p>　　（2）如果两个值类型不同，也有可能相等，需根据以下规则进行类型转换在比较：</p>
+<p>　　　　1）如果一个是null，一个是undefined，那么相等</p>
+<p>　　　　2）如果一个是字符串，一个是数值，把字符串转换成数值之后再进行比较</p>
+<p>　　三等号===:</p>
+<p>　　（1）如果类型不同，就一定不相等</p>
+<p>　　（2）如果两个都是数值，并且是同一个值，那么相等；如果其中至少一个是NaN，那么不相等。（判断一个值是否是NaN，只能使用isNaN( ) 来判断）</p>
+<p>　　（3）如果两个都是字符串，每个位置的字符都一样，那么相等，否则不相等。</p>
+<p>　　（4）如果两个值都是true，或是false，那么相等</p>
+<p>　　（5）如果两个值都引用同一个对象或是函数，那么相等，否则不相等</p>
+<p>　　（6）如果两个值都是null，或是undefined，那么相等</p>
+<h4 id="函数声明和函数表达式的区别"><a href="#函数声明和函数表达式的区别" class="headerlink" title="函数声明和函数表达式的区别"></a>函数声明和函数表达式的区别</h4><p>function xxx(){}表示函数声明，可以放在代码的任何位置，也可以在任何地方成功调用；</p>
+<p>var xxx = function(){};表示函数表达式，即将一个匿名函数赋值给一个变量，实现通过变量来调用这个匿名函数，但它需要在声明过后才能进行调用，如果调用在声明之前就会报如上红色字体的错误。而这在函数声明中不会出现这样的错误。</p>
+<ul>
+<li>将变量声明提升，只提升变量，不提升所赋的值；</li>
+<li><p>将函数声明及函数内容提升，既提升函数声明，又提升函数内容，可以理解为将整个function内容提升；</p>
+<p>函数声明和函数表达式相比，函数声明使用可以更加自由，可以放在随意的位置，因为它能够整体的变量提升； </p>
+<p>而函数表达式使用就相对没有那么自由了，调用必须在声明的后面，因为变量提前只是将表达式的变量提前，并没有将表达式的内容提前。 </p>
+</li>
+</ul>
+<h4 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h4><p><strong>首选ES6 提供新数据结构 Set</strong>   </p>
+<p>var arr1=Array.from(new Set(arr))</p>
+<p>var arr1 =[… new Set(arr)]</p>
+
     </div>
 
     
@@ -308,6 +521,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-中有几种数据类型"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 中有几种数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-什么叫全局变量-什么叫局部变量了-是如何定义出来的"><span class="nav-number">2.</span> <span class="nav-text">JavaScript 什么叫全局变量?什么叫局部变量了?是如何定义出来的?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#var-和-let-const-的区别"><span class="nav-number">3.</span> <span class="nav-text">var 和 let const 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typeof-返回哪些类型"><span class="nav-number">4.</span> <span class="nav-text">typeof 返回哪些类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列举强制类型转换和隐式类型转换"><span class="nav-number">5.</span> <span class="nav-text">列举强制类型转换和隐式类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#split-和-join-的区别？"><span class="nav-number">6.</span> <span class="nav-text">split() 和 join() 的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的-pop-push-unshift-shift-分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？"><span class="nav-number">7.</span> <span class="nav-text">数组的 pop push unshift shift 分别做什么功能是什么？返回值是什么？是否会对原数组造成影响？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的API-有哪些是纯函数？-（不对外界产生副作用的函数就叫纯函数）"><span class="nav-number">8.</span> <span class="nav-text">数组的API,有哪些是纯函数？  （不对外界产生副作用的函数就叫纯函数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组-slice-和-splice-区别"><span class="nav-number">9.</span> <span class="nav-text">数组 slice 和 splice 区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call-apply-bind-作用和区别"><span class="nav-number">10.</span> <span class="nav-text">call() apply() bind() 作用和区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件代理（委托）是什么？"><span class="nav-number">11.</span> <span class="nav-text">事件代理（委托）是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包是什么？有什么特性？有什么负面影响？"><span class="nav-number">12.</span> <span class="nav-text">闭包是什么？有什么特性？有什么负面影响？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何阻止事件冒泡和默认事件？"><span class="nav-number">13.</span> <span class="nav-text">如何阻止事件冒泡和默认事件？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找，添加，删除，移动DOM节点的方法"><span class="nav-number">14.</span> <span class="nav-text">查找，添加，删除，移动DOM节点的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-load-和-ready-的区别"><span class="nav-number">15.</span> <span class="nav-text">document load 和 ready 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#和-的区别"><span class="nav-number">16.</span> <span class="nav-text">== 和 === 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明和函数表达式的区别"><span class="nav-number">17.</span> <span class="nav-text">函数声明和函数表达式的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组去重"><span class="nav-number">18.</span> <span class="nav-text">数组去重</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
