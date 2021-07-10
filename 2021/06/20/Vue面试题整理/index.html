@@ -66,14 +66,17 @@
     }
 </style>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="什么是 MVVM？MVVM是Model-View-ViewModel的缩写。MVVM是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Vue面试题整理">
 <meta property="og:url" content="http://yoursite.com/2021/06/20/Vue面试题整理/index.html">
 <meta property="og:site_name" content="WayneLee">
+<meta property="og:description" content="什么是 MVVM？MVVM是Model-View-ViewModel的缩写。MVVM是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-06-20T05:52:42.075Z">
+<meta property="og:updated_time" content="2021-07-10T19:04:18.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue面试题整理">
+<meta name="twitter:description" content="什么是 MVVM？MVVM是Model-View-ViewModel的缩写。MVVM是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。">
 
 <link rel="canonical" href="http://yoursite.com/2021/06/20/Vue面试题整理/">
 
@@ -234,6 +237,13 @@
 
               <time title="创建时间：2021-06-20 13:52:42" itemprop="dateCreated datePublished" datetime="2021-06-20T13:52:42+08:00">2021-06-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-11 03:04:18" itemprop="dateModified" datetime="2021-07-11T03:04:18+08:00">2021-07-11</time>
+              </span>
 
           
 
@@ -246,7 +256,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h4 id="什么是-MVVM？"><a href="#什么是-MVVM？" class="headerlink" title="什么是 MVVM？"></a>什么是 MVVM？</h4><p>MVVM是Model-View-ViewModel的缩写。MVVM是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。</p><a id="more"></a>
+<p>在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。</p>
+<p>ViewModel 通过双向数据绑定把 View 层和 Model 层连接起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。</p>
+<h4 id="vue的优点是什么？"><a href="#vue的优点是什么？" class="headerlink" title="vue的优点是什么？"></a>vue的优点是什么？</h4><p>低耦合。视图（View）可以独立于Model变化和修改，一个ViewModel可以绑定到不同的”View”上，当View变化的时候Model可以不变，当Model变化的时候View也可以不变。</p>
+<p>可重用性。可以把一些视图逻辑放在一个ViewModel里面，让很多view重用这段视图逻辑。</p>
+<p>独立开发。开发人员可以专注于业务逻辑和数据的开发（ViewModel），设计人员可以专注于页面设计。</p>
+<p>可测试。界面素来是比较难于测试的，而现在测试可以针对ViewModel来写。</p>
+<h4 id="组件之间的传值？"><a href="#组件之间的传值？" class="headerlink" title="组件之间的传值？"></a>组件之间的传值？</h4><ul>
+<li><p>父组件通过标签上<code>:data=data</code>方式定义传值</p>
+</li>
+<li><p>子组件通过<code>props</code>方法接受数据</p>
+</li>
+<li><p>子组件通过<code>$emit</code>方法传递参数</p>
+</li>
+</ul>
+<h4 id="vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="vuex是什么？怎么使用？哪种功能场景使用它？"></a>vuex是什么？怎么使用？哪种功能场景使用它？</h4><p>vue框架中状态管理。在main.js引入store注入。新建一个目录store 。场景有：单页应用中，组件之间的状态，音乐播放、登录状态、加入购物车等。</p>
+<h4 id="vuex有哪几种属性？"><a href="#vuex有哪几种属性？" class="headerlink" title="vuex有哪几种属性？"></a>vuex有哪几种属性？</h4><p>有五种，分别是 State、 Getter、Mutation 、Action、 Module。</p>
+<h4 id="vuex的State特性"><a href="#vuex的State特性" class="headerlink" title="vuex的State特性"></a>vuex的State特性</h4><p>Vuex就是一个仓库，仓库里面放了很多对象。其中state就是数据源存放地，对应于一般Vue对象里面的data。</p>
+<p>state里面存放的数据是响应式的，Vue组件从store中读取数据，若是store中的数据发生改变，依赖这个数据的组件也会发生更新。</p>
+<p>通过mapState把全局 state 和 getters 映射到当前组件的 computed 计算属性中。</p>
+<h4 id="vuex的Getter特性"><a href="#vuex的Getter特性" class="headerlink" title="vuex的Getter特性"></a>vuex的Getter特性</h4><p>getters 可以对State进行计算操作，它就是Store的计算属性。</p>
+<p>虽然在组件内也可以做计算属性，但是getters 可以在多组件之间复用。</p>
+<p>如果一个状态只在一个组件内使用，可以不用getters。</p>
+<h4 id="vuex的Mutation特性"><a href="#vuex的Mutation特性" class="headerlink" title="vuex的Mutation特性"></a>vuex的Mutation特性</h4><p>Action 类似于 mutation，不同在于：Action 提交的是 mutation，而不是直接变更状态；Action 可以包含任意异步操作。</p>
+<h4 id="不用Vuex会带来什么问题？"><a href="#不用Vuex会带来什么问题？" class="headerlink" title="不用Vuex会带来什么问题？"></a>不用Vuex会带来什么问题？</h4><p>可维护性会下降，想修改数据要维护三个地方；</p>
+<p>可读性会下降，因为一个组件里的数据，根本就看不出来是从哪来的；</p>
+<p>增加耦合，大量的上传派发，会让耦合性大大增加，Vue用Component本意就是为了减少耦合，现在这么用，和组件化的初衷相背。</p>
+<h4 id="v-show和v-if指令的共同点和不同点"><a href="#v-show和v-if指令的共同点和不同点" class="headerlink" title="v-show和v-if指令的共同点和不同点"></a>v-show和v-if指令的共同点和不同点</h4><p>v-show指令是通过修改元素的display的CSS属性让其显示或者隐藏；</p>
+<p>v-if指令是直接销毁和重建DOM达到让元素显示和隐藏的效果；</p>
+<p>使用v-show会更加节省性能上的开销；当只需要一次显示或隐藏时，使用v-if更加合理。</p>
+
     </div>
 
     
@@ -305,6 +345,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是-MVVM？"><span class="nav-number">1.</span> <span class="nav-text">什么是 MVVM？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue的优点是什么？"><span class="nav-number">2.</span> <span class="nav-text">vue的优点是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件之间的传值？"><span class="nav-number">3.</span> <span class="nav-text">组件之间的传值？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex是什么？怎么使用？哪种功能场景使用它？"><span class="nav-number">4.</span> <span class="nav-text">vuex是什么？怎么使用？哪种功能场景使用它？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex有哪几种属性？"><span class="nav-number">5.</span> <span class="nav-text">vuex有哪几种属性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex的State特性"><span class="nav-number">6.</span> <span class="nav-text">vuex的State特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex的Getter特性"><span class="nav-number">7.</span> <span class="nav-text">vuex的Getter特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex的Mutation特性"><span class="nav-number">8.</span> <span class="nav-text">vuex的Mutation特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不用Vuex会带来什么问题？"><span class="nav-number">9.</span> <span class="nav-text">不用Vuex会带来什么问题？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-show和v-if指令的共同点和不同点"><span class="nav-number">10.</span> <span class="nav-text">v-show和v-if指令的共同点和不同点</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
