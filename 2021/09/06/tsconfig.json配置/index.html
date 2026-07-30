@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>tsconfig.json配置 | 李凤伟的小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TS笔记tsconfig.json配置文件include:[“.&#x2F;src&#x2F; &#x2F; “,”…….”]用来指定那些ts文件需要被编译{**代表任意目录  代表任意文件} exclude:[“…”]不需要被编译的文件目录                  默认值:[“node_modules”,”bower_components”,”jspm_packages”] extends:”.&#x2F;configs&#x2F;b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tsconfig.json配置">
+<meta property="og:url" content="http://yoursite.com/2021/09/06/tsconfig.json%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="李凤伟的小站">
+<meta property="og:description" content="TS笔记tsconfig.json配置文件include:[“.&#x2F;src&#x2F; &#x2F; “,”…….”]用来指定那些ts文件需要被编译{**代表任意目录  代表任意文件} exclude:[“…”]不需要被编译的文件目录                  默认值:[“node_modules”,”bower_components”,”jspm_packages”] extends:”.&#x2F;configs&#x2F;b">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-09-05T16:29:55.000Z">
+<meta property="article:modified_time" content="2026-07-30T14:09:39.962Z">
+<meta property="article:author" content="WayneLee">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="李凤伟的小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">李凤伟的小站</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-tsconfig.json配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/09/06/tsconfig.json%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2021-09-05T16:29:55.000Z" itemprop="datePublished">2021-09-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/TypeScript/">TypeScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      tsconfig.json配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="TS笔记"><a href="#TS笔记" class="headerlink" title="TS笔记"></a>TS笔记</h2><h4 id="tsconfig-json配置文件"><a href="#tsconfig-json配置文件" class="headerlink" title="tsconfig.json配置文件"></a>tsconfig.json配置文件</h4><p>include:[“./src/<em> </em>/ <em>“,”…….”]用来指定那些ts文件需要被编译{**代表任意目录  </em>代表任意文件}</p>
+<p>exclude:[“…”]不需要被编译的文件目录                  默认值:[“node_modules”,”bower_components”,”jspm_packages”]</p>
+<p>extends:”./configs/base” 当前配置文件会自动包含config目录下base.json中的所有配置信息 </p>
+<p>files:[“tsc.ts”,” binder.ts”]  指定被编译文件的列表 只有需要编译的文件少时才会用到</p>
+<p><strong>compilerOptions编译器选项</strong></p>
+<p>target:”ES3|ES5|ES6|es2015|es2016|es2017|es2018|es2019|es2020|esnext”   指定ts被编译的js版本</p>
+<p>module:”none|commonjs|amd|system|umd|es6|es2015|es2020|esnext”指定使用的模块化规范</p>
+<p>lib:[“……”] 用来指定项目中要使用的库  一般情况下在浏览器环境不需要改！！</p>
+<p>outDir:”./dist” 指定编译后文件所在的目录</p>
+<p>outFile:”./dist/app.js” 将代码合并为一个文件 所有的全局作用域的代码会合并一个文件</p>
+<p>allowJs:false 是否对js文件进行编译 默认false</p>
+<p>checkJs:false 是否检查js代码是否符合语法规范 默认false</p>
+<p>removeComments:false 是否移除注释</p>
+<p>noEmit:false 不生成编译后的文件</p>
+<p>noEmitOnError:false 当有错误时不生成编译后的文件</p>
+<p><strong>语法检查相关</strong></p>
+<p>alwaysStrict:false 设置编译后的文件是否使用严格模式</p>
+<p>noImplicitAny:false 不允许隐式的any类型</p>
+<p>noImplicitThis:false 不允许不明确类型的this</p>
+<p>strictNullChecks:false 严格检查空值</p>
+<p>strict:false 所有严格模式的总开关</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/09/06/tsconfig.json%E9%85%8D%E7%BD%AE/" data-id="cms7qdmv90003l43p4tzcgvij" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/06/ts%E6%B3%9B%E5%9E%8B%E3%80%81%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ts泛型、接口
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/">nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/23/react%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">面试题整理</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/11/nodejs/">nodejs</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/06/ts%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/">ts基础整理</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/06/ts%E6%B3%9B%E5%9E%8B%E3%80%81%E6%8E%A5%E5%8F%A3/">ts泛型、接口</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/06/tsconfig.json%E9%85%8D%E7%BD%AE/">tsconfig.json配置</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2026 WayneLee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":250,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
